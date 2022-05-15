@@ -19,7 +19,7 @@ const Header = () => (
           textDecoration: `none`,
         }}
       >
-        Pietro & Marta
+        Pietro &amp; Marta
       </a>
     </Link>
     <GiLinkedRings style={{ color: "var(--gold-2)" }} />
