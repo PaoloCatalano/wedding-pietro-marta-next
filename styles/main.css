@@ -392,3 +392,25 @@ pre tt:after {
     font-size: 1.5rem;
   }
 }
+
+/* GALLERY */
+.gallery-category {
+  margin-bottom: 4rem;
+}
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.image-frame span {
+  width: 250px !important;
+  height: 200px !important;
+  position: relative !important;
+}
+
+.image-frame img {
+  object-fit: cover;
+}
