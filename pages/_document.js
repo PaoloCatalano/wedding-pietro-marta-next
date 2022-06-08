@@ -15,7 +15,7 @@ class MyDocument extends Document {
           <meta property="og:url" content={url} key="ogurl" />
           <meta
             property="og:image"
-            content={`${url}/pietroemarta.png`}
+            content={`${url}/pietroemarta.jpeg`}
             key="ogimage"
           />
           <meta property="og:site_name" content={title} key="ogsitename" />
