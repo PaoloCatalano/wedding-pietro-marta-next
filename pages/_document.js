@@ -18,6 +18,11 @@ class MyDocument extends Document {
             content={`${url}/pietroemarta.jpeg`}
             key="ogimage"
           />
+          <meta
+            property="og:image:secure_url"
+            content={`${url}/pietroemarta.jpeg`}
+          />
+          <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:alt" content={title} />
           <meta property="og:image:width" content="1000" />
           <meta property="og:image:height" content="1000" />
