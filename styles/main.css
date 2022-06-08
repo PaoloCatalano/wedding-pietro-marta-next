@@ -549,6 +549,7 @@ pre tt:after {
   position: relative !important;
 }
 .image-frame {
+  position: relative !important;
   transition: var(--transition);
   box-shadow: 2px 2px 2px 2px transparent, -2px -2px 2px 2px transparent;
 }
@@ -560,4 +561,13 @@ pre tt:after {
 }
 .image-frame img {
   object-fit: cover;
+}
+.pic-title {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  text-shadow: 1px 1px 1px var(--pale-pink-transparent);
+  width: fit-content;
+  height: fit-content;
+  padding-right: 5px;
 }

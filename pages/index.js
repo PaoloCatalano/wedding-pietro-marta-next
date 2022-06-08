@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Video from "../components/Video";
+import blurData from "../lib/blurDataURL";
 
 const IndexPage = () => {
   return (
@@ -12,6 +13,8 @@ const IndexPage = () => {
       <div className="container ">
         <div className="pic-container appear">
           <Image
+            placeholder="blur"
+            blurDataURL={blurData}
             priority
             src="/pietro-w.png"
             alt="pietro"
@@ -21,6 +24,8 @@ const IndexPage = () => {
           />
 
           <Image
+            placeholder="blur"
+            blurDataURL={blurData}
             priority
             src="/marta-w.png"
             alt="marta"
@@ -45,6 +50,8 @@ const IndexPage = () => {
         <section className="animated-pics" style={{ "--delay": "2.5s" }}>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/party-1.png"
               alt="party"
@@ -55,6 +62,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/party-2.png"
               alt="party"
@@ -65,6 +74,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/party-3.png"
               alt="party"
@@ -95,6 +106,8 @@ const IndexPage = () => {
         <section className="animated-pics">
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/marta-open.png"
               alt="marta"
@@ -105,6 +118,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/marta-closed.png"
               alt="marta"
@@ -148,6 +163,8 @@ const IndexPage = () => {
         <section className="animated-pics">
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/pietro-y-open.png"
               alt="pietro smile"
@@ -158,6 +175,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/pietro-y-closed.png"
               alt="pietro"
@@ -182,6 +201,8 @@ const IndexPage = () => {
         <section className="animated-pics">
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/marta-w-open.png"
               alt="marta"
@@ -192,6 +213,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/marta-w-closed.png"
               alt="marta"
@@ -216,6 +239,8 @@ const IndexPage = () => {
         <section className="animated-pics">
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/pietro-w-smile.png"
               alt="pietro smile"
@@ -226,6 +251,8 @@ const IndexPage = () => {
           </div>
           <div>
             <Image
+              placeholder="blur"
+              blurDataURL={blurData}
               priority
               src="/pietro-w.png"
               alt="pietro"
@@ -263,6 +290,8 @@ const IndexPage = () => {
               <div>
                 <p>Paolo</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/paolo.png"
                   alt="paolo"
@@ -274,6 +303,8 @@ const IndexPage = () => {
               <div>
                 <p>Minhye</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/mine.png"
                   alt="minhye"
@@ -285,6 +316,8 @@ const IndexPage = () => {
               <div>
                 <p>Roberto</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/roberto.png"
                   alt="roberto"
@@ -298,6 +331,8 @@ const IndexPage = () => {
               <div>
                 <p>Gaetano</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/tano.png"
                   alt="tano"
@@ -309,6 +344,8 @@ const IndexPage = () => {
               <div>
                 <p>Eros</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/eros.png"
                   alt="eros"
@@ -320,6 +357,8 @@ const IndexPage = () => {
               <div>
                 <p>Roberta</p>
                 <Image
+                  placeholder="blur"
+                  blurDataURL={blurData}
                   priority
                   src="/roberta.png"
                   alt="roberta"

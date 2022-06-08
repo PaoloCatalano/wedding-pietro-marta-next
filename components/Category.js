@@ -7,13 +7,21 @@ export default function Category({ images }) {
 
       <div className="gallery-container">
         {images?.map(({ pic }) => (
-          <div key={pic.title} className="image-frame">
+          <a
+            href={pic.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={pic.title}
+            className="image-frame"
+          >
             <ContentfulImage
               layout="fill"
-              alt={`Image for ${pic.title}`}
+              sizes="30vw"
+              alt={`pietro e marta: ${pic.title}`}
               src={pic.url}
             />
-          </div>
+            <p className="pic-title">{pic.title}</p>
+          </a>
         ))}
       </div>
     </div>
