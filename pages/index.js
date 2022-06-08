@@ -23,7 +23,7 @@ const IndexPage = () => {
             className="moving"
           />
           <Image
-            src="/marta-w-svg.svg"
+            src="/marta-w.png"
             alt="marta"
             width={350}
             height={420}
