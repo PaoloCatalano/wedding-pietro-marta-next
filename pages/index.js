@@ -251,7 +251,7 @@ const IndexPage = () => {
             </p>
             <div style={{ marginBottom: "3rem" }}>
               <strong style={{ textTransform: "capitalize" }}>
-                viva gli sposi e viva il vostro amore.
+                viva gli sposi e viva il vostro amore!
               </strong>
             </div>
             <p>Con Affetto,</p>
