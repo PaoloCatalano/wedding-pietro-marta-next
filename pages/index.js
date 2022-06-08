@@ -248,12 +248,12 @@ const IndexPage = () => {
               il lieto fine come si è abituati a vedere nelle favole Disney.
               Oggi è l&apos;inizio del vostro percorso di coppia per il
               raggiungimento del fatidico FOREVAH, per cui...
-              <p>
-                <strong style={{ textTransform: "capitalize" }}>
-                  viva gli sposi e viva il vostro amore.
-                </strong>
-              </p>
             </p>
+            <div style={{ marginBottom: "3rem" }}>
+              <strong style={{ textTransform: "capitalize" }}>
+                viva gli sposi e viva il vostro amore.
+              </strong>
+            </div>
             <p>Con Affetto,</p>
             <p>Da:</p>
             <div
