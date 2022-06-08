@@ -204,12 +204,12 @@ const IndexPage = () => {
         <section className="text">
           <article>
             <p>
-              I due piccioncini sono volati via verso nord ovest dell'Europa,
-              prima l&apos;uno e poi l&apos;altra. Manchester è a tutti gli
-              effetti il vostro nido d&apos;amore, dove avete messo radici e
-              costruito le basi per la una vita insieme. La vostra casa è lo
-              scrigno della vostra relazione. Chi ha il piacere di venire a
-              trovarvi viene avvolto da tale magia.
+              I due piccioncini sono volati via verso nord ovest
+              dell&apos;Europa, prima l&apos;uno e poi l&apos;altra. Manchester
+              è a tutti gli effetti il vostro nido d&apos;amore, dove avete
+              messo radici e costruito le basi per la una vita insieme. La
+              vostra casa è lo scrigno della vostra relazione. Chi ha il piacere
+              di venire a trovarvi viene avvolto da tale magia.
             </p>
           </article>
         </section>
