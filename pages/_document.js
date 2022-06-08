@@ -18,6 +18,9 @@ class MyDocument extends Document {
             content={`${url}/pietroemarta.jpeg`}
             key="ogimage"
           />
+          <meta property="og:image:alt" content={title} />
+          <meta property="og:image:width" content="1000" />
+          <meta property="og:image:height" content="1000" />
           <meta property="og:site_name" content={title} key="ogsitename" />
           <meta property="og:title" content={title} key="ogtitle" />
           <meta property="og:description" content={description} key="ogdesc" />
