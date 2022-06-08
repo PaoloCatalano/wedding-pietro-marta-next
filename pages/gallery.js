@@ -12,13 +12,14 @@ export default function Gallery({ group_1, group_2, group_3 }) {
       <Head>
         <title>Marta e Pietro ¦ Gallery</title>
       </Head>
-      <center style={{ marginBottom: "3rem" }}>
+      <center style={{ marginBottom: "3rem" }} className="appear">
         <div className="date">Gallery</div>
       </center>
-
-      <Category images={group_1} />
-      <Category images={group_2} />
-      <Category images={group_3} />
+      <section className="appear" style={{ "--delay": "1s" }}>
+        <Category images={group_1} />
+        <Category images={group_2} />
+        <Category images={group_3} />
+      </section>
     </div>
   );
 }
