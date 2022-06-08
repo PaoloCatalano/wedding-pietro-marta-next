@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=optional");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=optional");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
 
 :root {
-  --transition: all 0.4s linear;
+  --transition: all 0.25s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
   --light-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
@@ -283,6 +283,21 @@ pre tt:after {
 }
 
 /* END DEFAULT */
+.navbar {
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-right {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
 .layout {
   margin: 0 auto;
   max-width: var(--max-width);
@@ -342,15 +357,21 @@ pre tt:after {
 }
 
 .date {
-  margin: 5rem 0 2rem 0;
-  font-size: 2rem;
-
-  color: var(--blue-scuro);
+  width: fit-content;
+  margin: 5rem auto;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--blue-medio);
+  border-bottom: 2px solid var(--blue-medio);
 }
 
 .animated-pics {
   position: relative;
   height: 480px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 .animated-pics div {
   position: absolute;
@@ -378,18 +399,131 @@ pre tt:after {
   }
 }
 
+.alternateABC-A {
+  animation: alternateABC-A 2.5s steps(3, jump-none) infinite;
+}
+@keyframes alternateABC-A {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.alternateABC-B {
+  animation: alternateABC-B 2.5s steps(3, jump-none) infinite;
+}
+@keyframes alternateABC-B {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0;
+  }
+  39% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  54% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  74% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.alternateABC-C {
+  animation: alternateABC-C 2.5s steps(3, jump-none) infinite;
+}
+@keyframes alternateABC-C {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  26% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  74% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  89% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text {
+  font-size: 1.5rem;
+}
+.title {
+  font-size: 2rem;
+}
+
 @media screen and (min-width: 900px) {
   html {
     font-size: var(--font-adjust);
   }
-  .title {
-    font-size: 1.5rem;
-  }
   .date {
     font-size: 5rem;
   }
-  .text {
-    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 1.2rem;
   }
 }
 
@@ -400,17 +534,30 @@ pre tt:after {
 .gallery-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.1rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
+  background-color: var(--white);
+  box-shadow: inset 2px 2px 2px 2px var(--seashell),
+    inset -2px -2px 2px 2px var(--seashell);
 }
 .image-frame span {
   width: 250px !important;
   height: 200px !important;
   position: relative !important;
 }
-
+.image-frame {
+  transition: var(--transition);
+  box-shadow: 2px 2px 2px 2px transparent, -2px -2px 2px 2px transparent;
+}
+.image-frame:hover,
+.image-frame:focus {
+  transform: scale(1.03);
+  z-index: 1;
+  box-shadow: 2px 2px 2px 2px var(--seashell), -2px -2px 2px 2px var(--seashell);
+}
 .image-frame img {
   object-fit: cover;
 }

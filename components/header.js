@@ -2,27 +2,16 @@ import Link from "next/link";
 import { GiLinkedRings } from "react-icons/gi";
 
 const Header = () => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--space-2)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-      width: "100%",
-    }}
-  >
+  <header className="navbar">
     <Link href="/">
-      <a
-        style={{
-          fontSize: `var(--font-sm)`,
-          textDecoration: `none`,
-        }}
-      >
-        Pietro &amp; Marta
-      </a>
+      <a>Pietro &amp; Marta</a>
     </Link>
-    <GiLinkedRings style={{ color: "var(--gold-2)" }} />
+    <div className="nav-right">
+      <Link href="/gallery">
+        <a>Gallery</a>
+      </Link>
+      <GiLinkedRings style={{ color: "var(--gold-2)" }} />
+    </div>
   </header>
 );
 

@@ -8,7 +8,9 @@ import Category from "../components/Category";
 export default function Gallery({ group_1, group_2, group_3 }) {
   return (
     <div>
-      <h1>Gallery</h1>
+      <center>
+        <h1>Gallery</h1>
+      </center>
 
       <Category images={group_1} />
       <Category images={group_2} />
