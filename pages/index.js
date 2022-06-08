@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Video from "../components/Video";
 import blurData from "../lib/blurDataURL";
 
@@ -98,7 +99,7 @@ const IndexPage = () => {
               I nostri cari amici finalmente sono riusciti ad allineare i
               pianeti, annullare le macumbe, radunare le fattucchiere piú
               potenti tra tutte le tribù africane conosciute fino ad ora e le
-              hanno pregate ti rendere possibile l&apos;organizzazione di tale
+              hanno pregate di rendere possibile l&apos;organizzazione di tale
               evento!
             </p>
           </article>
@@ -230,9 +231,9 @@ const IndexPage = () => {
               I due piccioncini sono volati via verso nord ovest
               dell&apos;Europa, prima l&apos;uno e poi l&apos;altra. Manchester
               è a tutti gli effetti il vostro nido d&apos;amore, dove avete
-              messo radici e costruito le basi per la una vita insieme. La
-              vostra casa è lo scrigno della vostra relazione. Chi ha il piacere
-              di venire a trovarvi viene avvolto da tale magia.
+              messo radici e costruito le basi per una vita insieme. La vostra
+              casa è lo scrigno di una relazione bella e duratura. Chi ha il
+              piacere di venire a trovarvi viene avvolto da tale magia.
             </p>
           </article>
         </section>
@@ -370,6 +371,11 @@ const IndexPage = () => {
             </div>
           </article>
         </section>
+        <center>
+          <Link href="/gallery">
+            <a className="gallery-link">Vai alla Gallery</a>
+          </Link>
+        </center>
       </div>
     </>
   );
