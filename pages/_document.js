@@ -15,12 +15,12 @@ class MyDocument extends Document {
           <meta property="og:url" content={url} key="ogurl" />
           <meta
             property="og:image"
-            content={`${url}/pietroemarta.jpeg`}
+            content="https://martaepietro.netlify.app/pietroemarta.jpeg"
             key="ogimage"
           />
           <meta
             property="og:image:secure_url"
-            content={`${url}/pietroemarta.jpeg`}
+            content="https://martaepietro.netlify.app/pietroemarta.jpeg"
           />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:alt" content={title} />
