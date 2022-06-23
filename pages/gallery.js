@@ -1,13 +1,27 @@
 import Head from "next/head";
+import _ from "lodash";
 import {
   getFirstImages,
   getSecondImages,
   getThirdImages,
   getFourthImages,
+  getCategories,
 } from "../lib/contentful-api";
 import Category from "../components/Category";
 
-export default function Gallery({ group_1, group_2, group_3, group_4 }) {
+export default function Gallery({
+  group_1,
+  group_2,
+  group_3,
+  group_4,
+  categories,
+}) {
+  const sortCat = _.sortBy(categories, ["category"]);
+  const uniqCat = new Set(sortCat.map(({ category }) => category));
+
+  const cats = [...uniqCat, "Reportage"];
+
+  const groups = [group_1, group_2, group_3, group_4];
   return (
     <div>
       <Head>
@@ -16,13 +30,23 @@ export default function Gallery({ group_1, group_2, group_3, group_4 }) {
       <center style={{ marginBottom: "3rem" }} className="appear">
         <div className="date">Gallery</div>
       </center>
-      <section className="appear" style={{ "--delay": "1s" }}>
-        <Category images={group_1} />
-        <Category images={group_2} />
-        <Category images={group_3} />
-        <Category images={group_4} />
+      <center
+        className="appear"
+        style={{ "--delay": "1s", marginBottom: "3rem" }}
+      >
+        <div className="title">Categorie</div>
+        {cats.map((c) => (
+          <a style={{ marginRight: 15 }} href={`#${c}`}>
+            {c}
+          </a>
+        ))}
+      </center>
+      <section className="appear" style={{ "--delay": "1.5s" }}>
+        {groups?.map((g, i) => (
+          <Category images={g} key={g[0].category} />
+        ))}
       </section>
-      <center>
+      <center id="Reportage">
         <a
           className="gallery-link"
           href="http://pierluigic.quickconnect.to/mo/sharing/xsW3OgRox"
@@ -42,7 +66,9 @@ export async function getStaticProps() {
   const group_3 = (await getThirdImages()) ?? [];
   const group_4 = (await getFourthImages()) ?? [];
 
+  const categories = (await getCategories()) ?? [];
+
   return {
-    props: { group_1, group_2, group_3, group_4 },
+    props: { group_1, group_2, group_3, group_4, categories },
   };
 }

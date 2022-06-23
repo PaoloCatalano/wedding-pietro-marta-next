@@ -18,7 +18,7 @@ const IndexPage = () => {
       <Head>
         <title>Marta e Pietro</title>
       </Head>
-      <div className="container ">
+      <div className="container">
         <div className="pic-container appear">
           <Image
             placeholder="blur"

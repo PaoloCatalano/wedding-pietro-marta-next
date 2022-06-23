@@ -95,6 +95,7 @@ html {
   line-height: var(--line-height-normal);
   overflow-y: scroll;
   background-color: var(--seashell);
+  scroll-behavior: smooth;
 }
 body {
   -moz-osx-font-smoothing: grayscale;

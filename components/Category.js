@@ -2,7 +2,7 @@ import ContentfulImage from "../components/ContentfulImage";
 
 export default function Category({ images }) {
   return (
-    <div className="gallery-category">
+    <div className="gallery-category" id={images[0].category}>
       <h2>{images[0].category}</h2>
 
       <div className="gallery-container">
