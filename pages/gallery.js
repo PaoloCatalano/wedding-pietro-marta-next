@@ -35,8 +35,8 @@ export default function Gallery({
         style={{ "--delay": "1s", marginBottom: "3rem" }}
       >
         <div className="title">Categorie</div>
-        {cats.map((c) => (
-          <a style={{ marginRight: 15 }} href={`#${c}`}>
+        {cats.map((c, i) => (
+          <a style={{ marginRight: 15 }} href={`#${c}`} key={c + i}>
             {c}
           </a>
         ))}
