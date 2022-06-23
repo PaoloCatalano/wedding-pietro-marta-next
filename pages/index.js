@@ -2,10 +2,17 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Video from "../components/Video";
 import blurData from "../lib/blurDataURL";
 
 const IndexPage = () => {
+  const variants = {
+    initial: { opacity: 0, x: -100 },
+    inView: { opacity: 1, x: 0 },
+    initial_Y: { opacity: 0, x: -100, y: -100 },
+    inView_Y: { opacity: 1, x: 0, y: 0 },
+  };
   return (
     <>
       <Head>
@@ -104,7 +111,13 @@ const IndexPage = () => {
             </p>
           </article>
         </section>
-        <section className="animated-pics">
+        <motion.section
+          variants={variants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: false }}
+          className="animated-pics"
+        >
           <div>
             <Image
               placeholder="blur"
@@ -129,7 +142,7 @@ const IndexPage = () => {
               className="alternate-B"
             />
           </div>
-        </section>
+        </motion.section>
         <section className="text">
           <article>
             <p>
@@ -146,9 +159,15 @@ const IndexPage = () => {
             </p>
           </article>
         </section>
-        <section style={{ margin: "3rem 0 5rem 0" }}>
+        <motion.section
+          variants={variants}
+          initial="initial_Y"
+          whileInView="inView_Y"
+          viewport={{ once: false }}
+          style={{ margin: "3rem 0 5rem 0" }}
+        >
           <Video />
-        </section>
+        </motion.section>
         <section className="text">
           <article>
             <p>
@@ -161,7 +180,13 @@ const IndexPage = () => {
             </p>
           </article>
         </section>
-        <section className="animated-pics">
+        <motion.section
+          variants={variants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: false }}
+          className="animated-pics"
+        >
           <div>
             <Image
               placeholder="blur"
@@ -186,7 +211,7 @@ const IndexPage = () => {
               className="alternate-B"
             />
           </div>
-        </section>
+        </motion.section>
         <section className="text">
           <article>
             <p>
@@ -199,7 +224,13 @@ const IndexPage = () => {
             </p>
           </article>
         </section>
-        <section className="animated-pics">
+        <motion.section
+          variants={variants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: false }}
+          className="animated-pics"
+        >
           <div>
             <Image
               placeholder="blur"
@@ -224,7 +255,7 @@ const IndexPage = () => {
               className="alternate-B"
             />
           </div>
-        </section>
+        </motion.section>
         <section className="text">
           <article>
             <p>
@@ -237,7 +268,13 @@ const IndexPage = () => {
             </p>
           </article>
         </section>
-        <section className="animated-pics">
+        <motion.section
+          variants={variants}
+          initial="initial"
+          whileInView="inView"
+          viewport={{ once: false }}
+          className="animated-pics"
+        >
           <div>
             <Image
               placeholder="blur"
@@ -262,7 +299,7 @@ const IndexPage = () => {
               className="alternate-B"
             />
           </div>
-        </section>
+        </motion.section>
         <section className="text">
           <article>
             <p>
@@ -284,96 +321,108 @@ const IndexPage = () => {
             </div>
             <p>Con Affetto,</p>
             <p>Da:</p>
-            <div
-              className="pic-container appear"
-              style={{ marginBottom: "3rem" }}
+            <motion.section
+              variants={variants}
+              initial="initial_Y"
+              whileInView="inView_Y"
+              viewport={{ once: false }}
             >
-              <div>
-                <p>Paolo</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/paolo.png"
-                  alt="paolo"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
+              <div
+                className="pic-container appear"
+                style={{ marginBottom: "3rem" }}
+              >
+                <div>
+                  <p>Paolo</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/paolo.png"
+                    alt="paolo"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
+                <div>
+                  <p>Minhye</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/mine.png"
+                    alt="minhye"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
+                <div>
+                  <p>Roberto</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/roberto.png"
+                    alt="roberto"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
               </div>
-              <div>
-                <p>Minhye</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/mine.png"
-                  alt="minhye"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
+              <div className="pic-container appear">
+                <div>
+                  <p>Gaetano</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/tano.png"
+                    alt="tano"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
+                <div>
+                  <p>Eros</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/eros.png"
+                    alt="eros"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
+                <div>
+                  <p>Roberta</p>
+                  <Image
+                    placeholder="blur"
+                    blurDataURL={blurData}
+                    priority
+                    src="/roberta.png"
+                    alt="roberta"
+                    width={350}
+                    height={420}
+                    className="moving"
+                  />
+                </div>
               </div>
-              <div>
-                <p>Roberto</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/roberto.png"
-                  alt="roberto"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
-              </div>
-            </div>
-            <div className="pic-container appear">
-              <div>
-                <p>Gaetano</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/tano.png"
-                  alt="tano"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
-              </div>
-              <div>
-                <p>Eros</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/eros.png"
-                  alt="eros"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
-              </div>
-              <div>
-                <p>Roberta</p>
-                <Image
-                  placeholder="blur"
-                  blurDataURL={blurData}
-                  priority
-                  src="/roberta.png"
-                  alt="roberta"
-                  width={350}
-                  height={420}
-                  className="moving"
-                />
-              </div>
-            </div>
+            </motion.section>
           </article>
         </section>
-        <center>
+        <center style={{ marginBottom: "2rem" }}>
           <Link href="/gallery">
             <a className="gallery-link">Vai alla Gallery</a>
+          </Link>
+        </center>
+        <center>
+          <Link href="/videos">
+            <a className="gallery-link">Vai ai Video</a>
           </Link>
         </center>
       </div>

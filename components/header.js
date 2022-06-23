@@ -11,6 +11,9 @@ const Header = () => (
         <a>Gallery</a>
       </Link>
       <GiLinkedRings style={{ color: "var(--gold-2)" }} />
+      <Link href="/videos">
+        <a>Video</a>
+      </Link>
     </div>
   </header>
 );

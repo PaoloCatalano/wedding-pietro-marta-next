@@ -13,6 +13,8 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content={description} />
           <meta property="og:url" content={url} key="ogurl" />
+          <meta property="og:type" content="website" />
+          <meta property="og:locale" content="it_it" />
           <meta
             property="og:image"
             content="https://martaepietro.netlify.app/pietroemarta.jpeg"

@@ -582,3 +582,14 @@ pre tt:after {
   height: fit-content;
   padding-right: 5px;
 }
+
+.video-title {
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 1px var(--pale-pink-transparent);
+  width: 100%;
+  height: fit-content;
+  padding-right: 2px;
+  color: var(--color-primary);
+  background: linear-gradient(var(--white) 85%, rgba(255, 255, 255, 0.1));
+}
